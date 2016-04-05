@@ -1,25 +1,20 @@
 import React, { Component } from 'react'
 import action from '../redux/actions.js'
+import store from '../redux/store'
 class TodoInput extends Component {
 
   constructor(props, context) {
     super(props, context)
-    this.state = {
-      inputText: ''
-    }
-    this.handleSubmit = this.handleSubmit.bind(this);
+ 
   }
 
 
-  handleChange(event) {
-    this.setState({
-      inputText: event.target.value
-    })
-  }
+ 
   handleSubmit(){
     event.preventDefault()
     //this.props.dispatch()
-    this.props.dispatch(action.addTodo(this.state.inputText));
+    console.log(this._input.value);
+    store.dispatch(action.addTodo(this._input.value));
   }
 
 
@@ -30,11 +25,12 @@ class TodoInput extends Component {
       <div>
         <input
           type="text"
+
           placeholder="Type in your tode"
-          value={this.state.inputText}
-          onChange={this.handleChange.bind(this)}
+     
+          ref={(c) => this._input = c}
         />
-        <button onClick={this.handleSubmit}>Submit</button>
+        <button onClick={()=>this.handleSubmit()}>Submit</button>
       </div>
     )
   }

@@ -25,5 +25,8 @@
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.6.4"
+  },
+  "devDependencies": {
+    "babel-preset-stage-0": "^6.5.0"
   }
 }

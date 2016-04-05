@@ -3,7 +3,14 @@ let  actions ={
 		return ({
 	type:'ADD_TODO',
 	text:text})
-}
+},
+	toggleTodo:(id)=>{
+		return({
+	type:'TOGGLE_TODO',
+	id:id,
+	})
+
+	}
 }
 
 

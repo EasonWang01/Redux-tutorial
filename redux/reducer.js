@@ -1,10 +1,4 @@
-function getId(state){
-	return state.todos.reduce((maxId,todo)=>{
-		return Math.max(todo.id,maxId)
-	},-1) + 1
-
-}
-
+let getId = 1 ;
 
 export default function reducer(state,action){
 	switch(action.type){
@@ -14,11 +8,28 @@ export default function reducer(state,action){
 				todos:[{
 				  text:action.text,
 				  completed:false,
-				  id:getId(state)
+				  id:getId++
 
 				},...state.todos]
 			})
 			)
+		case 'TOGGLE_TODO':
+
+      return Object.assign({},state,{todos:state.todos.map(function(state){
+                if(state.id!==action.id){
+                return  state
+                };
+
+                return {...state,completed:!state.completed}
+           
+			}) }
+      )
+
+
+	
+
+				
+
 		default:
 			return state;
 
