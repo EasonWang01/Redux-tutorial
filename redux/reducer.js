@@ -25,7 +25,9 @@ export default function reducer(state,action){
 			}) }
       )
 
+      	case 'SET_VISBILITY_FILTER':
 
+      	return Object.assign({},state,{visbility:action.filter}) 
 	
 
 				

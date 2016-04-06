@@ -10,6 +10,13 @@ let  actions ={
 	id:id,
 	})
 
+	},
+	FilterTodo:(filter)=>{
+		return({
+	type:'SET_VISBILITY_FILTER',
+	filter:filter		
+
+		})
 	}
 }
 

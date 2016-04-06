@@ -4,6 +4,7 @@ import logger from 'redux-logger'
 
 
 let initialState = {
+	visbility:'SHOW_ALL',
 	todos:[{
 		id:0,
 		completed: false,
@@ -17,7 +18,7 @@ let finalCreateStore = compose(
 	applyMiddleware(logger())
 	)(createStore)
 
-function configureStore(initialState = { todos:[]}){
+function configureStore(initialState){
 	return finalCreateStore(reducer,initialState)
 
 }

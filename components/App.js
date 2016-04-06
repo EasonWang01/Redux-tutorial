@@ -13,7 +13,7 @@ class App extends Component {
       <div>
         <h1>Todo list</h1>
         <TodoInput />
-        <TodoList  todos={this.props.todos}/>
+        <TodoList  todos={this.props}/>
      
   
       </div>
