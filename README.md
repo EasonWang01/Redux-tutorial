@@ -1,3 +1,12 @@
 # react-todo-list
 
-This is a simple todo list app built with React, Redux and Webpack. origin from here (https://www.youtube.com/playlist?list=PLQDnxXqV213JJFtDaG0aE9vqvp6Wm7nBg).
+For beginner.
+
+It's the step order of branchs.
+
+1.master
+2.toggle
+3.link
+4.combindReducer
+5.ajax
+6.react-redux-router
