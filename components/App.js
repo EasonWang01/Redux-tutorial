@@ -9,9 +9,8 @@ class App extends Component {
     return (
       <div>
         <h1>Todo list</h1>
-        <TodoInput />
-        <TodoList  todos={this.props}/>
-     
+      
+     {React.cloneElement(this.props.children, { todos:this.props })}
   
       </div>
     )

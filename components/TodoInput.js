@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import action from '../redux/actions.js'
 import store from '../redux/store'
+import RaisedButton from 'material-ui/lib/raised-button';
+import Radium from 'radium'
+import { Link, browserHistory } from 'react-router'
 class TodoInput extends Component {
 
   constructor(props, context) {
     super(props, context)
- 
+   
   }
-
 
  
   handleSubmit(){
@@ -26,6 +28,7 @@ class TodoInput extends Component {
   render() {
     return (
       <div>
+      <p a={store.getState()}> </p>
         <input
           type="text"
 
@@ -33,13 +36,25 @@ class TodoInput extends Component {
      
           ref={(c) => this._input = c}
         />
-        <button onClick={()=>this.handleSubmit()}>Submit</button>
-        <button onClick={()=>this.handleconsole()}>console</button>
-        
+         <RaisedButton   label="Submit"onClick={()=>this.handleSubmit()} />
+       
+        <button  style={style.submit} onClick={()=>this.handleconsole()}>console</button>
+         <Link to="/as">Bar</Link>
       </div>
     )
   }
 
 }
 
-export default TodoInput
+var style = {
+  submit:{
+        ':hover': {
+              backgroundColor: 'red'
+            }
+  }
+}
+
+export default Radium(TodoInput)
+
+
+

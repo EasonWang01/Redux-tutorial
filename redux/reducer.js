@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-
+import {routerReducer} from 'react-router-redux'
 let getId = 1 ;
 
 function todos(state=[],action){
@@ -55,6 +55,7 @@ function visbility(state="SHOW_ALL",action){
 const rootReducer = combineReducers({
   visbility,
   todos,
+  routing: routerReducer,
 })
 
 
