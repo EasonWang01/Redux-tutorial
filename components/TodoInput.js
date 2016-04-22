@@ -39,7 +39,7 @@ class TodoInput extends Component {
          <RaisedButton   label="Submit"onClick={()=>this.handleSubmit()} />
        
         <button  style={style.submit} onClick={()=>this.handleconsole()}>console</button>
-         <Link to="/as">Bar</Link>
+       
       </div>
     )
   }

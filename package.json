@@ -4,8 +4,7 @@
   "description": "A simple todo list app built with React, Redux and Webpack",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon server/server.js --ignore components",
-    "storybook": "start-storybook -p 9001"
+    "serve": "nodemon server/server.js --harmony_modules --ignore components"
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,8 @@
     "babel-preset-react-hmre": "^1.1.0",
     "express": "^4.13.4",
     "material-ui": "^0.15.0-alpha.2",
+    "mongodb": "^2.1.16",
+    "mongoose": "^4.4.13",
     "radium": "^0.17.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",

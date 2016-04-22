@@ -24,6 +24,7 @@ function todos(state=[],action){
            
 			}) 
 
+
 		default:
 			return state;
 
@@ -45,6 +46,17 @@ function visbility(state="SHOW_ALL",action){
  }
 }
 
+function time(state="",action){
+	switch(action.type){
+		case 'settime':
+
+      	return action.time
+	
+
+		default:
+			return state;
+ }
+}
 
 
 
@@ -55,6 +67,7 @@ function visbility(state="SHOW_ALL",action){
 const rootReducer = combineReducers({
   visbility,
   todos,
+  time,
   routing: routerReducer,
 })
 

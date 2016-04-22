@@ -1,4 +1,5 @@
 let  actions ={ 
+	
 	addTodo:(text)=>{
 		return ({
 	type:'ADD_TODO',
@@ -17,6 +18,13 @@ let  actions ={
 	filter:filter		
 
 		})
+	},
+	Time:(time)=>{
+		return{
+			type:'settime',
+			time:time,
+
+		}
 	},
 	con:()=>{
 		return (dispatch,getState)=>{
