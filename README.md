@@ -1,6 +1,8 @@
-# react-todo-list
+# React-redux
 
-For beginner.
+You might start with master branch.
+
+After you master the master branch,than head to the toggle branch.
 
 It's the step order of branchs.
 ```
