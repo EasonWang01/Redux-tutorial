@@ -1,23 +1,21 @@
-import React from 'react'
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { render } from 'react-dom'
-import App from '../components/App'
-import store from '../redux/store'
+import root from './root.js'
 import {Provider} from 'react-redux'
-import { Router, Route, browserHistory } from 'react-router'
-import { syncHistoryWithStore} from 'react-router-redux'
-import TodoList from '../components/TodoList.js'
-import TodoInput from '../components/TodoInput.js'
+import {configureStore} from '../redux/store'
+import {Router, browserHistory, Route} from 'react-router';
 
-const history = syncHistoryWithStore(browserHistory, store)
+const initialState = window.__PRELOADED_STATE__;
 
-render(
-  <Provider store={store} >
-     <Router history={history}>
-      <Route path="/" foo="bar" component={App}>
-         <Route path="/as" component={TodoList}/>
-         <Route path="/aas" component={TodoInput}/>
-      </Route>
-    </Router> 
-  </Provider>,
-  document.getElementById('app')
+// 將 initialState 傳給 configureStore 函數創建出 store 並傳給 Provider
+const store = configureStore(initialState);
+
+ReactDOM.render(
+	<Provider store={store}>
+	  <Router history={browserHistory} routes={root} />
+	</Provider>
+,document.getElementById('app')
 )
+
+

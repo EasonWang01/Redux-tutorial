@@ -3,22 +3,15 @@ import reducer from './reducer'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 
-let initialState = {
-	visbility:'SHOW_ALL',
-	todos:[{
-		id:0,
-		completed: false,
-		text:'initial for demo'
+const initialState ={};
 
-	}]
-}
-
+// use initial state to create store and pass to provider
 
 let finalCreateStore = compose(
 	applyMiddleware(thunk,logger())
 	)(createStore)
 
-function configureStore(initialState){
+export function configureStore(initialState){
 	return finalCreateStore(reducer,initialState)
 
 }

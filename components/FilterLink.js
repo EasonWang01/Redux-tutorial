@@ -5,7 +5,7 @@ class FliterLink extends Component {
 
 	render(){
 		if(this.props.currentFilter==this.props.filter){
-			return <span> {this.props.children}</span>
+			return <span> </span>
 		}
 
 	return	<a  href='#'
@@ -17,7 +17,6 @@ class FliterLink extends Component {
 			}}
 					
 		>
-			{this.props.children}
 		</a>
 	}
 

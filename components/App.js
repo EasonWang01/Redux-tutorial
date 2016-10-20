@@ -6,12 +6,12 @@ import {connect} from 'react-redux'
 class App extends Component {
 
   render() {
+  	
+console.log(this.props)
     return (
       <div>
-        <h1>Todo list</h1>
-      
-     {React.cloneElement(this.props.children, { todos:this.props })}
-  
+        <h1>Tsd list</h1>
+        {this.props.children}
       </div>
     )
   }

@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'inline-source-map',
+  devtool: 'cheap-eval-source-map',
   entry: {
     app:[
     'webpack-hot-middleware/client',
@@ -19,7 +19,7 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-     new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js"),
+    new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js"),
   ],
   module: {
     loaders: [

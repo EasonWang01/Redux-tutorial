@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import action from '../redux/actions.js'
 import store from '../redux/store'
-import RaisedButton from 'material-ui/lib/raised-button';
 import Radium from 'radium'
 import { Link, browserHistory } from 'react-router'
 class TodoInput extends Component {
@@ -36,8 +35,7 @@ class TodoInput extends Component {
      
           ref={(c) => this._input = c}
         />
-         <RaisedButton   label="Submit"onClick={()=>this.handleSubmit()} />
-       
+
         <button  style={style.submit} onClick={()=>this.handleconsole()}>console</button>
          <Link to="/as">Bar</Link>
       </div>
