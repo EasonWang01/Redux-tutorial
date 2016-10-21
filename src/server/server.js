@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-var config = require('../webpack.config.js');
+var config = require('../../webpack.config.js');
 var webpack = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpackHotMiddleware = require('webpack-hot-middleware');
@@ -24,18 +24,16 @@ app.use(express.static('./dist'));
 
 
 app.post('/ajax',function(req,res){
-	
+
 	res.end("success");
 })
 
 let initialState = {
-	visbility:'SHOW_ALL',
-	todos:[{
-		id:0,
-		completed: false,
-		text:'initial for demo'
-
-	}]
+		todos:[{
+			id:0,
+			completed: false,
+			text:'initial for demo'
+		}]
 }
 
 

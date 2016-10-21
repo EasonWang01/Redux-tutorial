@@ -5,13 +5,13 @@ module.exports = {
   entry: {
     app:[
     'webpack-hot-middleware/client',
-    './client/client.js'
+    './src/client/client.js'
   ],
   vendor:['react','react-dom']
 },
 
   output: {
-    path: require("path").resolve("./dist"),
+    path: require("path").resolve("./src/dist"),
     filename: 'bundle.js',
     publicPath: '/'
   },

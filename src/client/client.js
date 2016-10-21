@@ -8,7 +8,6 @@ import {Router, browserHistory, Route} from 'react-router';
 
 const initialState = window.__PRELOADED_STATE__;
 
-// 將 initialState 傳給 configureStore 函數創建出 store 並傳給 Provider
 const store = configureStore(initialState);
 
 ReactDOM.render(
@@ -17,5 +16,3 @@ ReactDOM.render(
 	</Provider>
 ,document.getElementById('app')
 )
-
-
